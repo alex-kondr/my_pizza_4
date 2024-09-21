@@ -1,0 +1,9 @@
+{# "templates/menu.html" #}
+
+{% extends "_base.html" %}
+
+{% block content %}
+
+{{ macros.sort_price(pizzas) }}
+<h1><em>Сума цін</em>: {{ pizzas|sum(attribute="price") }}</h1>
+{% endblock content %}
